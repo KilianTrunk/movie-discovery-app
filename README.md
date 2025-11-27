@@ -87,12 +87,6 @@ npm run test:coverage      # Run tests with coverage
 - TypeScript for type safety
 - Comprehensive test coverage
 
-## Future Improvements
-
-- **Global State Management**: Replace sessionStorage with Zustand for better state management
-- **Infinite Scroll or Pagination**: Implement virtual scrolling for better UX with large movie lists
-- **Advanced Search Filters**: Add genre, year, and rating filters to the search functionality
-
 ## Contributing
 
 1. Fork the repository
@@ -105,3 +99,21 @@ npm run test:coverage      # Run tests with coverage
 ## License
 
 This project was created as part of a coding challenge.
+
+## Challenge Reflection
+
+### Requirements Not Implemented
+None - all core requirements were successfully implemented.
+
+### Issues Faced During Implementation
+None - the implementation proceeded smoothly without any significant issues.
+
+### What I Would Improve With More Time
+
+- **Global State Management**: Replace sessionStorage with Zustand for better state management
+- **Infinite Scroll or Pagination**: Implement virtual scrolling for better UX with large movie lists
+- **Advanced Search Filters**: Add genre, year, and rating filters to the search functionality
+
+---
+
+**Created by: Kilian Trunk**
