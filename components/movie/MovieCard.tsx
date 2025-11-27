@@ -44,13 +44,11 @@ export function MovieCard({ movie, priority = false, index = 0 }: MovieCardProps
           </>
         ) : (
           <div className="flex h-full items-center justify-center bg-surface-subtle text-text-muted relative">
-            {/* Animated background pattern */}
             <div className="absolute inset-0 bg-gradient-to-br from-surface to-surface-subtle animate-pulse" />
             <ImageIcon className="h-16 w-16 relative z-10 opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
           </div>
         )}
 
-        {/* Rating badge */}
         <div className="absolute top-3 right-3 rounded-full bg-bg/90 backdrop-blur-sm border border-primary/30 px-3 py-1.5 text-sm font-bold text-text shadow-lg flex items-center gap-1">
           <Star className="w-3 h-3 text-primary fill-current" />
           <span>{movie.vote_average.toFixed(1)}</span>
@@ -58,12 +56,10 @@ export function MovieCard({ movie, priority = false, index = 0 }: MovieCardProps
       </div>
 
       <div className="p-3 sm:p-5 relative">
-        {/* Title with gradient text effect on hover */}
         <h3 className="font-bold text-base sm:text-lg leading-tight mb-2 overflow-hidden text-ellipsis whitespace-nowrap transition-all duration-500 bg-gradient-to-r from-text to-text bg-clip-text text-transparent group-hover:from-primary group-hover:to-secondary">
           {movie.title}
         </h3>
 
-        {/* Meta information */}
         <div className="flex items-center justify-between text-sm text-text-muted mb-3">
           <div className="flex items-center space-x-2">
             {releaseYear && (
@@ -77,7 +73,6 @@ export function MovieCard({ movie, priority = false, index = 0 }: MovieCardProps
           </div>
         </div>
 
-        {/* Description with fade effect */}
         {movie.overview && (
           <div className="relative">
             <p

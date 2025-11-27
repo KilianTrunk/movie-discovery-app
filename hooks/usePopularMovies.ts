@@ -8,6 +8,10 @@ interface UsePopularMoviesResult {
   refetch: () => void;
 }
 
+/*
+ Hook to fetch popular movies
+ @returns The popular movies, whether the movies are loading, the error, and the function to refetch the movies
+*/
 export function usePopularMovies(): UsePopularMoviesResult {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [isLoading, setIsLoading] = useState(true);

@@ -28,6 +28,11 @@ async function tmdbFetch<T>(endpoint: string, params?: Record<string, string>): 
   const response = await fetch(url.toString());
 
   if (!response.ok) {
+    // Throw specific error for 404 (movie not found)
+    if (response.status === 404) {
+      throw new Error('MOVIE_NOT_FOUND');
+    }
+    // Throw generic error for other API issues
     throw new Error(`TMDB API error: ${response.status} ${response.statusText}`);
   }
 

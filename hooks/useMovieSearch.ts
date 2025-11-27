@@ -9,6 +9,10 @@ interface UseMovieSearchResult {
   clearSearch: () => void;
 }
 
+/*
+ Hook to search for movies
+ @returns The search results, whether the search is in progress, the search error, the function to search for movies, and the function to clear the search
+*/
 export function useMovieSearch(): UseMovieSearchResult {
   const [searchResults, setSearchResults] = useState<Movie[]>([]);
   const [isSearching, setIsSearching] = useState(false);

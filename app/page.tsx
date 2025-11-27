@@ -1,9 +1,9 @@
 'use client';
 
-import { MovieCard } from '@/components/MovieCard';
-import { MovieCardSkeleton } from '@/components/ui/MovieCardSkeleton';
+import { MovieCard } from '@/components/movie/MovieCard';
+import { MovieCardSkeleton } from '@/components/movie/MovieCardSkeleton';
+import { ErrorBoundary } from '@/components/ui/ErrorBoundary';
 import { SearchBar } from '@/components/SearchBar';
-import { ErrorMessage } from '@/components/ui/ErrorMessage';
 import { Container } from '@/components/ui/Container';
 import { usePopularMovies } from '@/hooks/usePopularMovies';
 import { useMovieSearch } from '@/hooks/useMovieSearch';
@@ -27,10 +27,7 @@ export default function HomePage() {
     return (
       <div className="min-h-screen bg-bg flex items-center justify-center">
         <Container>
-          <ErrorMessage
-            message={error}
-            action={{ label: 'Try Again', onClick: refetch }}
-          />
+          <ErrorBoundary message={error} onRetry={refetch} />
         </Container>
       </div>
     );

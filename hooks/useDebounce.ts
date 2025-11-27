@@ -1,5 +1,11 @@
 import { useRef } from 'react';
 
+/*
+ Debounce hook
+ @param callback - The function to debounce
+ @param delay - The delay in milliseconds
+ @returns The debounced function that will be called after the delay
+*/
 export function useDebounce<Args extends readonly unknown[], Return>(
   callback: (...args: Args) => Return,
   delay: number

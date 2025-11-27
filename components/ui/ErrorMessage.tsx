@@ -30,7 +30,7 @@ export function ErrorMessage({
       {action && (
         <button
           onClick={action.onClick}
-          className="bg-primary hover:bg-primary-hover px-6 py-3 rounded-lg font-medium transition-colors text-bg"
+          className="bg-primary hover:bg-primary-hover px-6 py-3 rounded-lg font-medium transition-colors text-bg cursor-pointer"
         >
           {action.label}
         </button>
