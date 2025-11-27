@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Movie Discovery App
+
+A modern movie discovery application built with Next.js and The Movie Database (TMDB) API. Browse popular movies, search for specific titles, and explore detailed movie information.
+
+## Tech Stack
+
+- **Frontend**: Next.js 13+ (App Router), React 19, TypeScript
+- **Styling**: Tailwind CSS
+- **Testing**: Jest, React Testing Library
+- **API**: The Movie Database (TMDB)
+- **Deployment**: Docker
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 20+
+- TMDB API Key ([get one here](https://www.themoviedb.org/settings/api))
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/KilianTrunk/movie-discovery-app.git
+   cd movie-discovery-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env
+   # Edit .env and add your TMDB_API_KEY
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open [http://localhost:3000](http://localhost:3000)**
+
+### Docker Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Start development environment
+docker-compose up
+
+# Build and run
+docker-compose up --build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev                # Start development server
+npm run build              # Build for production
+npm run start              # Start production server
+npm run lint               # Run ESLint
+npm test                   # Run Jest tests
+npm run test:coverage      # Run tests with coverage
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+├── app/                   # Next.js App Router pages
+│   ├── api/               # API routes
+│   ├── movie/[id]/        # Dynamic movie detail pages
+│   └── page.tsx           # Home page
+├── components/            # Reusable React components
+├── hooks/                 # Custom React hooks
+├── lib/                   # External service integrations
+├── types/                 # TypeScript definitions
+├── utils/                 # Utility functions
+└── __tests__/             # Test files
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Browse popular movies from TMDB
+- Search movies by title
+- View detailed movie information
+- Responsive design for all devices
+- TypeScript for type safety
+- Comprehensive test coverage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Future Improvements
 
-## Deploy on Vercel
+- **Global State Management**: Replace sessionStorage with Zustand for better state management
+- **Infinite Scroll or Pagination**: Implement virtual scrolling for better UX with large movie lists
+- **Advanced Search Filters**: Add genre, year, and rating filters to the search functionality
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Ensure all tests pass
+6. Submit a pull request
+
+## License
+
+This project was created as part of a coding challenge.
