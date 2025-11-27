@@ -167,7 +167,7 @@ export async function generateMetadata({ params }: MoviePageProps) {
   }
 
   return {
-    title: `${movie.title} (${new Date(movie.release_date).getFullYear()})`,
+    title: `${movie.title}${movie.release_date ? ` (${new Date(movie.release_date).getFullYear()})` : ''}`,
     description: movie.overview,
     openGraph: {
       title: movie.title,
